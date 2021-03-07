@@ -5,38 +5,38 @@
  */
 package Inhertitance;
 
-class Parent
-{
-    public Parent()
-    {
-        System.out.println("Parent Constrcutor");
+/**
+ *
+ * @author abli
+ */
+public class Inheritance {
+
+    public static void main(String[] args) {
+
+       // parent parent1 = new parent();
+      //  child child1 = new child();
+        grandChild grandChild1 = new grandChild();
     }
-            
+
+}
+class parent {
+
+    public parent() {
+        System.out.println("This is parent class");
+    }
+
 }
 
-class Child extends Parent
-{
-    public Child()
-    {
-        System.out.println("Child Constructor");
+class child extends parent {
+
+    public child() {
+        System.out.println("This is child class");
     }
 }
 
-class GrandChild extends Child
-{
-    public GrandChild()
-    {
-        System.out.println("Grand Child Constructor");
-    }
-}
-public class InheritConst 
-{
+class grandChild extends child {
 
-    public static void main(String[] args) 
-    {
-          // parent parent1 = new parent();
-          //  child child1 = new child();
-        grandChild grandChild1 = new grandChild();      
+    public grandChild() {
+        System.out.println("This is grandChild class");
     }
-    
 }
