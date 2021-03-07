@@ -34,7 +34,9 @@ public class InheritConst
 
     public static void main(String[] args) 
     {
-        GrandChild c=new GrandChild();        
+          // parent parent1 = new parent();
+          //  child child1 = new child();
+        grandChild grandChild1 = new grandChild();      
     }
     
 }
