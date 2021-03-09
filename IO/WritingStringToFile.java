@@ -30,7 +30,7 @@ public class WritingStringToFile {
 
     public static void main(String[] args) throws Exception {
 
-        try (FileOutputStream fos = new FileOutputStream("txt")) {
+        try (FileOutputStream fos = new FileOutputStream("Hello.txt")) {
             String str = "Learning Java is fun";
 
             byte b[] = str.getBytes();
