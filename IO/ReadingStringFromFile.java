@@ -16,6 +16,7 @@ write data
  */
 package IO;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,20 +27,19 @@ import java.util.logging.Logger;
  *
  * @author abli
  */
-public class WritingStringToFile {
+public class ReadingStringFromFile {
 
     public static void main(String[] args) throws Exception {
 
-        try (FileOutputStream fos = new FileOutputStream("Hello.txt")) {
-            String str = "Learning Java is fun";
-
-            byte b[] = str.getBytes();
-            // Choosing which letter to print
-            /* 
-            for (byte c : b) {
-            fos.write(c);
-            }*/
-            fos.write(b);
+        try (FileInputStream fis = new FileInputStream("Hello.txt")) {
+            
+            byte b[] = new byte[fis.available()];
+            
+            fis.read(b);
+            String string = new String(b);
+            
+            System.out.println(string);
+            
         }
 
     }

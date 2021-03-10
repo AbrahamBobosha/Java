@@ -13,11 +13,14 @@ write data
     void flash is use if we are using buffer.
     void close method.
 
+fileOutOutStream almost like fileReader
  */
 package IO;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,20 +29,18 @@ import java.util.logging.Logger;
  *
  * @author abli
  */
-public class WritingStringToFile {
+public class UsingFileReader {
 
     public static void main(String[] args) throws Exception {
 
-        try (FileOutputStream fos = new FileOutputStream("Hello.txt")) {
-            String str = "Learning Java is fun";
+        try (FileReader fr = new FileReader("Hello.txt")) {
+           
+            int x;
+            while ((x = fr.read()) != -1) {
+                System.out.print((char) x);
 
-            byte b[] = str.getBytes();
-            // Choosing which letter to print
-            /* 
-            for (byte c : b) {
-            fos.write(c);
-            }*/
-            fos.write(b);
+            }
+
         }
 
     }
